@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-1">
+  <p class="col-2">
     <% @wp.each do |wp| %>
-      <div class="alert alert-default">
+      <p>
         <%= link_to wp[0], root_path({ p: wp[0] }) %>
-      </div>
+      </p>
     <% end %>
   </div>
-  <div class="col-11">
+  <div class="col-10">
     <% if params[:p].nil? %>
       <h1>👈 请从左边选择一页。</h1>
     <% end %>
