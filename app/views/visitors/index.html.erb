@@ -16,8 +16,11 @@
       <% res[:tw].each do |tw| %>
         <div class="alert alert-info">
           <h4><i class="fas fa-volume-up"></i> <%= tw["query"] %></h4>
-          <div><%= tw['web'][0]['value'].join('，') %></div>
-          <br>
+          <% if tw['web'] %>
+            <div><%= tw['web'][0]['value'].join('，') %></div>
+          <% else %>
+            <div><%= tw['translation'].join('，') %></div>
+          <% end %>
           <audio>
             <source src="<%= tw['speakUrl'] %>" type="audio/mpeg">
             Your browser does not support the audio element.
