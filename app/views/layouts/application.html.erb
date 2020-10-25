@@ -4,15 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Rails Bootstrap" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
+    <main role="main" class="container-fluid">
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>

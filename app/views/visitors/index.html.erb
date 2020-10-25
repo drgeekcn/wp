@@ -1,8 +1,39 @@
-<div class="jumbotron">
-  <h1 class="display-2">Welcome</h1>
-  <p class="lead">
-    This web application was created with
-    <%= link_to('Rails Composer', 'http://railsapps.github.io/rails-composer/') %>
-    from the <%= link_to('RailsApps project', 'http://railsapps.github.io/') %>.
-  </p>
+<div class="row">
+  <div class="col-1">
+    <% @wp.each do |wp| %>
+      <div class="alert alert-default">
+        <%= link_to wp[0], root_path({ p: wp[0] }) %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-11">
+    <% if params[:p].nil? %>
+      <h1>👈 请从左边选择一页。</h1>
+    <% end %>
+    <h1><%= params[:p] %></h1>
+    <% @res.try(:each_with_index) do |res, i| %>
+      <h3><%= i + 1 %>&nbsp;&nbsp;<%= res[:w] %></h3>
+      <% res[:tw].each do |tw| %>
+        <div class="alert alert-info">
+          <h4><i class="fas fa-volume-up"></i> <%= tw["query"] %></h4>
+          <div><%= tw['web'][0]['value'].join('，') %></div>
+          <br>
+          <audio>
+            <source src="<%= tw['speakUrl'] %>" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <div class="d-none"><%= tw %></div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
+
+<script>
+  $(function () {
+    $('.alert-info').on('click', function () {
+      $(this).find('audio')[0].play()
+      console.log($(this).find('audio'))
+    })
+  })
+</script>
