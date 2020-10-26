@@ -1,4 +1,5 @@
 require 'faraday'
+require 'open-uri'
 
 class VisitorsController < ApplicationController
   def index
@@ -14,11 +15,29 @@ class VisitorsController < ApplicationController
     word.try(:each) do |w|
       tw = []
       w.split('/').each do |sw|
-        tw << JSON.parse(translate(sw).body)
+        filename = "#{p}_#{sw}"
+        mp3_file_path = '/tmp/' + filename + '.mp3'
+        translate_file_path = Rails.root.join('public', 'tmp', filename + '.txt').to_s
+        break unless File.exist?(translate_file_path)
+        translate_text = File.read(translate_file_path)
+        tw << { query: sw, translate_text: translate_text, speakUrl: mp3_file_path }
       end
       @res << { w: w, tw: tw }
     end
+
+    # 生成文件
+    if params['g']
+      word.try(:each) do |w|
+        tw = []
+        w.split('/').each do |sw|
+          t = JSON.parse(translate(sw).body)
+          filename = "#{p}_#{sw}"
+          save_translate(t, filename)
+        end
+      end
+    end
   end
+
 
   private
 
@@ -31,6 +50,26 @@ class VisitorsController < ApplicationController
     sign = Digest::SHA256.hexdigest("#{appKey}#{input}#{salt}#{curtime}#{secretKey}")
     url = "https://openapi.youdao.com/api?q=#{q}&from=en&to=zh-CHS&appKey=#{appKey}&salt=#{salt}&sign=#{sign}&signType=v3&curtime=#{curtime}&ext=mp3&voice=0&strict=false"
     res = Faraday.get(URI.encode(url))
+
+
+  end
+
+  def save_translate(translate, filename)
+    mp3_file_path = Rails.root.join('public', 'tmp', filename + '.mp3').to_s
+    translate_file_path = Rails.root.join('public', 'tmp', filename + '.txt').to_s
+
+    File.open(translate_file_path, 'wb') do |f|
+      if translate['web']
+        f.write(translate['web'][0]['value'].join('，'))
+      else
+        f.write(translate['translation'].join('，'))
+      end
+    end
+
+    File.open(mp3_file_path, 'wb') do |f|
+      f << open(translate['speakUrl']).read
+    end
+
   end
 
 

@@ -9,14 +9,10 @@
       <h3><%= i + 1 %>&nbsp;&nbsp;<%= res[:w] %></h3>
       <% res[:tw].each do |tw| %>
         <div class="alert alert-info">
-          <h4><i class="fas fa-volume-up"></i> <%= tw["query"] %></h4>
-          <% if tw['web'] %>
-            <div><%= tw['web'][0]['value'].join('，') %></div>
-          <% else %>
-            <div><%= tw['translation'].join('，') %></div>
-          <% end %>
+          <h4><i class="fas fa-volume-up"></i> <%= tw[:query] %></h4>
+          <div><%= tw[:translate_text] %></div>
           <audio>
-            <source src="<%= tw['speakUrl'] %>" type="audio/mpeg">
+            <source src="<%= tw[:speakUrl] %>" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
           <div class="d-none"><%= tw %></div>
@@ -37,12 +33,12 @@
   $(function () {
     $('.alert-info').on('click', function () {
       $(this).find('audio')[0].play()
-      console.log($(this).find('audio'))
+      // console.log($(this).find('audio'))
     })
 
     $('#page').on('change', function () {
       Turbolinks.visit('<%= root_path %>' + '?p=' + $(this).val())
-      console.log($(this).val())
+      // console.log($(this).val())
     })
   })
 </script>
