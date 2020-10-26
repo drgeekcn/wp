@@ -1,16 +1,10 @@
 <div class="row">
-  <p class="col-2">
-    <% @wp.each do |wp| %>
-      <p>
-        <%= link_to wp[0], root_path({ p: wp[0] }) %>
-      </p>
+  <div class="col-12">
+    <%= select_tag 'page', options_for_select(@page, params[:p]), { prompt: "请选择一页", class: 'd-block form-control form-control-lg' } %>
+    <br>
+    <% if params[:p].blank? %>
+      <h3>👆 请从上面选择一页。</h3>
     <% end %>
-  </div>
-  <div class="col-10">
-    <% if params[:p].nil? %>
-      <h1>👈 请从左边选择一页。</h1>
-    <% end %>
-    <h1><%= params[:p] %></h1>
     <% @res.try(:each_with_index) do |res, i| %>
       <h3><%= i + 1 %>&nbsp;&nbsp;<%= res[:w] %></h3>
       <% res[:tw].each do |tw| %>
@@ -28,15 +22,27 @@
           <div class="d-none"><%= tw %></div>
         </div>
       <% end %>
+      <hr>
     <% end %>
+    <br>
+    <br>
+    <br>
+    <br>
   </div>
+
 </div>
+
 
 <script>
   $(function () {
     $('.alert-info').on('click', function () {
       $(this).find('audio')[0].play()
       console.log($(this).find('audio'))
+    })
+
+    $('#page').on('change', function () {
+      Turbolinks.visit('<%= root_path %>' + '?p=' + $(this).val())
+      console.log($(this).val())
     })
   })
 </script>

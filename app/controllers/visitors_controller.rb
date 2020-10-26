@@ -3,9 +3,14 @@ require 'faraday'
 class VisitorsController < ApplicationController
   def index
     @res = []
-    @wp = YAML.load_file(Rails.root.join('config', 'wordpower.yml'))
+    @page = []
+    wp = YAML.load_file(Rails.root.join('config', 'wordpower.yml'))
+    wp.try(:each) do |page|
+      @page << page[0]
+    end
+
     p = params['p']
-    word = @wp["#{p}"]
+    word = wp["#{p}"]
     word.try(:each) do |w|
       tw = []
       w.split('/').each do |sw|

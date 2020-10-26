@@ -1,3 +1,92 @@
+P11:
+  - new
+  - old
+  - hot
+  - cold
+  - long
+  - short
+  - clean
+  - dirty
+  - easy
+  - difficult/hard
+  - heavy
+  - light
+  - open
+  - closed
+  - full
+  - empty
+  - fancy
+  - plain
+  - straight
+  - crooked
+  - straight
+  - curly
+  - wide
+  - narrow
+  - thick
+  - thin
+  - dark
+  - light
+  - high
+  - low
+  - loose
+  - tight
+  - comfortable
+  - uncomfortable
+  - shiny
+  - dull
+  - smooth
+  - rough
+  - soft
+  - hard
+  - sharp
+  - dull
+  - wet
+  - dry
+P17:
+  - baby/infant
+  - child/children
+  - teenager
+  - adult
+  - senior citizen/elderly person
+  - girl
+  - boy
+  - woman/women
+  - man/men
+  - neighbor
+  - friend
+  - classmate
+  - teammate
+  - captain/team leader
+  - coach
+  - teacher
+  - coworker
+  - partner
+  - supervisor
+  - boss
+P18:
+  - actor
+  - actress
+  - dancer
+  - singer
+  - artist
+  - teacher/instructor
+  - principal
+  - firefighter
+  - police officer
+  - soldier
+  - doctor
+  - nurse
+  - veterinarian/vet
+  - farmer
+  - fisher
+  - mail carrier/letter carrier
+  - postal worker
+  - driver
+  - bud driver
+  - taxi driver
+  - housekeeper
+  - babysitter
 P19:
 - chef/cook
 - waiter/server
