@@ -5,6 +5,7 @@ class VisitorsController < ApplicationController
   def index
     @res = []
     @page = []
+    @can_generate_translation_file = false
     wp = YAML.load_file(Rails.root.join('config', 'wordpower.yml'))
     wp.try(:each) do |page|
       @page << page[0]
@@ -18,7 +19,10 @@ class VisitorsController < ApplicationController
         filename = "#{p}_#{sw}"
         mp3_file_path = '/tmp/' + filename + '.mp3'
         translate_file_path = Rails.root.join('public', 'tmp', filename + '.txt').to_s
-        break unless File.exist?(translate_file_path)
+        unless File.exist?(translate_file_path)
+          @can_generate_translation_file = true
+          break
+        end
         translate_text = File.read(translate_file_path)
         tw << { query: sw, translate_text: translate_text, speakUrl: mp3_file_path }
       end
@@ -35,6 +39,7 @@ class VisitorsController < ApplicationController
           save_translate(t, filename)
         end
       end
+      redirect_to root_path(p: p)
     end
   end
 

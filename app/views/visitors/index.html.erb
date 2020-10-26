@@ -5,6 +5,11 @@
     <% if params[:p].blank? %>
       <h3>👆 请从上面选择一页。</h3>
     <% end %>
+    <% if @can_generate_translation_file %>
+      <%= link_to '生成翻译和语音', root_path(p: params[:p], g: true),class: 'btn btn-primary btn-block btn-lg' %>
+      <br>
+      <br>
+    <% end %>
     <% @res.try(:each_with_index) do |res, i| %>
       <h3><%= i + 1 %>&nbsp;&nbsp;<%= res[:w] %></h3>
       <% res[:tw].each do |tw| %>
