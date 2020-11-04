@@ -29,6 +29,81 @@ P3:
   - fall/autumn
   - winter
   - January 1, 2014/January first, two thousand fourteen
+P4:
+  - morning
+  - afternoon
+  - evening
+  - night
+  - yesterday
+  - today
+  - tomorrow
+  - yesterday morning
+  - yesterday afternoon
+  - yesterday evening
+  - last night
+  - this morning
+  - this afternoon
+  - this evening
+  - tonight
+  - tomorrow morning
+  - tomorrow afternoon
+  - tomorrow evening
+  - tomorrow night
+  - last week
+  - this week
+  - next week
+  - once a week
+  - twice a week
+  - three times a week
+  - every day
+  - early
+  - late
+  - on time
+P5:
+  - height
+  - width
+  - depth
+  - length
+  - inch
+  - foot/feet
+  - yard
+  - centimeter
+  - meter
+  - mile
+  - kilometer
+  - ounce
+  - pound
+  - ton
+  - gram
+  - kilogram
+  - metric ton/tonne
+  - cup
+  - pint
+  - quart
+  - gallon
+  - milliliter
+  - liter
+P8:
+  - dot
+  - dotted line
+  - line
+  - circle
+  - oval
+  - pie
+  - triangle
+  - square
+  - rectangle
+  - pentagon
+  - hexagon
+  - octagon
+  - star
+  - heart
+  - diamond
+  - sphere
+  - cylinder
+  - cone
+  - pyramid
+  - cube
 P9:
   - white
   - black
@@ -288,3 +363,203 @@ P19:
   - 'food-service worker'
   - florist
   - cashier
+P20:
+  - designer
+  - translator/interpreter
+  - journalist
+  - reporter
+  - writer/author
+  - musician
+  - painter
+  - photographer
+  - professor
+  - 'health-care aide/health-care attendant'
+  - medical assistant/physician assistant
+  - sailor
+  - bricklayer/mason
+  - carpenter
+  - construction worker
+  - custodian/janitor
+  - delivery person
+  - dockworker
+  - factory worker
+  - machine operator
+P21:
+  - mechanic
+  - mover
+  - repairperson
+  - sanitation worker/trash collector
+  - security guard
+  - welder
+  - businesswoman
+  - businessman
+  - receptionist
+  - secretary
+  - accountant
+  - architect
+  - computer software engineer
+  - judge
+  - lawyer
+  - pharmacist
+  - scientist
+  - astronaut
+P22-P23:
+  - play cards
+  - (deck of) cards
+  - club
+  - diamond
+  - heart
+  - spade
+  - play board games
+  - Chess
+  - Checkers
+  - Backgammon
+  - Monopoly
+  - dice
+  - Scrabble
+  - go online/surf the Net/browse the web
+  - web browser
+  - web address/URL/link
+  - photography
+  - camera
+  - lens
+  - flash
+  - memory disk
+  - battery
+  - astronomy
+  - telescope
+  - sew
+  - needle
+  - thread
+  - knit
+  - knitting needles
+  - yarn
+  - paint
+  - paintbrush
+  - canvas
+  - paint
+  - draw
+  - sketch book
+  - colored pencil
+  - drawing pencil
+  - do woodworking
+  - do origami
+  - make pottery
+  - collect stamps
+  - collect coins
+  - build models
+  - model kit
+  - glue
+  - go bird-watching
+  - binoculars
+P24:
+  - wash my hair
+  - dry my hair
+  - comb my hair
+  - brush my hair
+  - style my hair
+  - wash my hair
+  - shave
+  - brush my teeth
+  - floss my teeth
+  - gargle
+  - take a bath/bathe
+  - take a shower
+  - shave my armpits
+  - put on deodorant
+  - put on lotion/moisturize
+  - put on makeup
+  - do my nails
+  - shave my legs
+  - polish my shoes
+P25:
+  - comb
+  - hairbrush
+  - hairspray
+  - styling gel
+  - hair dryer/blow dryer
+  - mouthwash
+  - dental floss
+  - makeup
+  - eye shadow
+  - mascara
+  - blush
+  - lipstick
+  - moisturizer
+  - sunscreen
+  - body lotion
+  - hand lotion
+  - deodorant
+  - cologne
+  - perfume
+  - nail clipper
+  - nail polish
+  - razor
+  - electric shaver
+P26-27:
+  - head
+  - hair
+  - forehead
+  - face
+  - eye
+  - eyebrow
+  - eyelid
+  - eyelashes
+  - ear
+  - cheek
+  - nose
+  - mouth
+  - lips
+  - tooth/teeth
+  - tongue
+  - jaw
+  - chin
+  - neck
+  - shoulder
+  - arm
+  - elbow
+  - wrist
+  - hand
+  - palm
+  - thumb
+  - finger
+  - fingernail
+  - knuckle
+  - chest
+  - abdomen
+  - belly button
+  - waist
+  - back
+  - hip
+  - buttocks/bottom
+  - leg
+  - thigh
+  - knee
+  - calf
+  - shin
+  - foot/feet
+  - ankle
+  - heel
+  - toe
+  - toenail
+  - skin
+  - brain
+  - throat
+  - esophagus
+  - lung
+  - heart
+  - liver
+  - gallbladder
+  - stomach
+  - large intestine
+  - small intestine
+  - pacreas
+  - kidney
+  - bladder
+  - vein
+  - muscle
+  - bone
+  - skull
+  - skeleton
+  - ribcage
+  - spine
