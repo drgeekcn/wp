@@ -13,9 +13,9 @@
       <table class="table table-bordered table-striped">
         <% @res.try(:each_with_index) do |res, i| %>
           <% res[:tw].each do |tw| %>
-          <tr>
-
-              <td><%= i + 1 %>&nbsp;&nbsp;<%= tw[:query] %></td>
+            <tr>
+              <td><%= i + 1 %></td>
+              <td><%= tw[:query] %></td>
               <td>
                 <i class="fas fa-volume-up"></i>
                 <audio>
@@ -27,9 +27,7 @@
                 <div><%= tw[:translate_text] %></div>
                 <div class="d-none"><%= tw %></div>
               </td>
-
-
-          </tr>
+            </tr>
           <% end %>
         <% end %>
       </table>
