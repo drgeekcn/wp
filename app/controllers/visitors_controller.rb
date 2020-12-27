@@ -64,10 +64,10 @@ class VisitorsController < ApplicationController
     translate_file_path = Rails.root.join('public', 'tmp', filename + '.txt').to_s
 
     File.open(translate_file_path, 'wb') do |f|
-      if translate['web']
-        f.write(translate['web'][0]['value'].join('，'))
-      else
+      if translate['translation']
         f.write(translate['translation'].join('，'))
+      elsif (translate['web'])
+        f.write(translate['web'][0]['value'].join('，'))
       end
     end
 
