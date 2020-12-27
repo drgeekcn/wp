@@ -629,6 +629,7 @@ P77:
   - furniture store
   - dry cleaners/cleaners
 P136(Africa):
+  - Africa
   - Algeria
   - Central African Republic
   - Egypt
@@ -641,6 +642,7 @@ P136(Africa):
   - Nigeria
   - South Africa
 P136(Asia):
+  - Asia
   - Afghanistan
   - Cambodia
   - China
@@ -660,3 +662,49 @@ P136(Asia):
   - South Korea
   - Thailand
   - Vietnam
+P136(Europe):
+  - Europe
+  - Austria
+  - Belgium
+  - Denmark
+  - Finland
+  - France
+  - Germany
+  - Greece
+  - Hungary
+  - Iceland
+  - Ireland
+  - Italy
+  - Netherlands/Holland
+  - Norway
+  - Poland
+  - Portugal
+  - Romania
+  - Spain
+  - Sweden
+  - Switzerland
+  - Turkey
+  - Ukraine
+  - United Kingdom
+P136(Oceania):
+  - Australia
+  - Fiji
+  - New Zealand
+P136(North America):
+  - North America
+  - Bahamas
+  - Canada
+  - Cuba
+  - Haiti
+  - Jamaica
+  - Mexico
+  - Puerto Rico
+  - U.S.A
+P136(South America):
+  - South America
+  - Argentina
+  - Brazil
+  - Chile
+  - Costa Rica
+  - Colombia
+  - Peru

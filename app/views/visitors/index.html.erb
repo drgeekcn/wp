@@ -6,25 +6,36 @@
       <h3>👆 请从上面选择一页。</h3>
     <% end %>
     <% if @can_generate_translation_file %>
-      <%= link_to '生成翻译和语音', root_path(p: params[:p], g: true),class: 'btn btn-primary btn-block btn-lg' %>
+      <%= link_to '生成翻译和语音', root_path(p: params[:p], g: true), class: 'btn btn-primary btn-block btn-lg' %>
       <br>
       <br>
+    <% else %>
+      <table class="table table-bordered table-striped">
+        <% @res.try(:each_with_index) do |res, i| %>
+          <% res[:tw].each do |tw| %>
+          <tr>
+
+              <td><%= i + 1 %>&nbsp;&nbsp;<%= tw[:query] %></td>
+              <td>
+                <i class="fas fa-volume-up"></i>
+                <audio>
+                  <source src="<%= tw[:speakUrl] %>" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </td>
+              <td>
+                <div><%= tw[:translate_text] %></div>
+                <div class="d-none"><%= tw %></div>
+              </td>
+
+
+          </tr>
+          <% end %>
+        <% end %>
+      </table>
+
     <% end %>
-    <% @res.try(:each_with_index) do |res, i| %>
-      <h3><%= i + 1 %>&nbsp;&nbsp;<%= res[:w] %></h3>
-      <% res[:tw].each do |tw| %>
-        <div class="alert alert-info">
-          <h4><i class="fas fa-volume-up"></i> <%= tw[:query] %></h4>
-          <div><%= tw[:translate_text] %></div>
-          <audio>
-            <source src="<%= tw[:speakUrl] %>" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-          <div class="d-none"><%= tw %></div>
-        </div>
-      <% end %>
-      <hr>
-    <% end %>
+
     <br>
     <br>
     <br>
@@ -36,7 +47,7 @@
 
 <script>
   $(function () {
-    $('.alert-info').on('click', function () {
+    $('tr').on('click', function () {
       $(this).find('audio')[0].play()
       // console.log($(this).find('audio'))
     })
