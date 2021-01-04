@@ -594,6 +594,37 @@ P43:
   - rug/area rug
   - coffee table
   - stairs/staircase
+P54 (Fast Food):
+  - hamburger
+  - cheeseburger
+  - hot dog
+  - sandwich
+  - fish sandwich
+  - chicken sandwich
+  - sub sandwich
+  - wrap
+  - fried chicken
+  - chicken wings/wings
+  - French fries
+  - nachos
+  - taco
+  - burrito
+  - slice of pizza
+  - bowl of chili
+  - salad
+  - ice cream
+  - milkshake
+  - soda/pop
+  - lids
+  - paper cups
+  - straws
+  - napkins
+  - plastic utensils
+  - ketchup
+  - mustard
+  - mayonnaise/mayo
+  - relish
+  - salad dressing
 P76:
   - bakery
   - coffee shop/cafe
@@ -628,7 +659,7 @@ P77:
   - movie theater/cinema
   - furniture store
   - dry cleaners/cleaners
-P136(Africa):
+P136 (Africa):
   - Africa
   - Algeria
   - Central African Republic
@@ -641,7 +672,7 @@ P136(Africa):
   - Morocco
   - Nigeria
   - South Africa
-P136(Asia):
+P136 (Asia):
   - Asia
   - Afghanistan
   - Cambodia
@@ -662,7 +693,7 @@ P136(Asia):
   - South Korea
   - Thailand
   - Vietnam
-P136(Europe):
+P136 (Europe):
   - Europe
   - Austria
   - Belgium
@@ -686,12 +717,12 @@ P136(Europe):
   - Turkey
   - Ukraine
   - United Kingdom
-P136(Oceania):
+P136 (Oceania):
   - Oceania
   - Australia
   - Fiji
   - New Zealand
-P136(North America):
+P136 (North America):
   - North America
   - Bahamas
   - Canada
@@ -701,7 +732,7 @@ P136(North America):
   - Mexico
   - Puerto Rico
   - U.S.A
-P136(South America):
+P136 (South America):
   - South America
   - Argentina
   - Brazil

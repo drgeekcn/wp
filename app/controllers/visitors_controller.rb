@@ -43,6 +43,34 @@ class VisitorsController < ApplicationController
     end
   end
 
+  def generate_json
+    res = []
+    page = {
+      page: '',
+      words: []
+    }
+    wp = YAML.load_file(Rails.root.join('config', 'wordpower.yml'))
+
+    page[:page] = params['p']
+
+    word = wp["#{page[:page]}"]
+    word.try(:each) do |w|
+      tw = []
+      w.split('/').each do |sw|
+        filename = "#{page[:page]}_#{sw}"
+        translate_file_path = Rails.root.join('public', 'tmp', filename + '.txt').to_s
+        translate_text = File.read(translate_file_path)
+        page[:words] << { query: sw, translate_text: translate_text }
+      end
+    end
+
+    json_file_path = Rails.root.join('public', 'tmp', page[:page] + '.json').to_s
+    File.open(json_file_path, 'wb') do |f|
+      f.write(page.to_json)
+    end
+    render json: page.to_json
+
+  end
 
   private
 
